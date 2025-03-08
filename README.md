@@ -3,17 +3,16 @@
 
 ## 📚 Currently Learning  
 
-### 🔥 Backend  
-- **Spring Boot** → 프로젝트 구조, REST API 개발  
-- **JPA & QueryDSL** → 데이터베이스 최적화 및 성능 튜닝  
-- **Spring Security** → OAuth 2.0 & JWT 인증 구현  
+🛠️ Backend:  
+![Spring Boot](https://img.shields.io/badge/Spring%20Boot-6DB33F?style=for-the-badge&logo=springboot&logoColor=white)  
+![Java](https://img.shields.io/badge/Java-007396?style=for-the-badge&logo=java&logoColor=white)  
+![JPA](https://img.shields.io/badge/JPA-6DB33F?style=for-the-badge&logo=hibernate&logoColor=white)  
 
-### 🎨 Frontend  
-- **Vue.js** → Vue Router & 상태관리(Vuex, Pinia)  
-- **JavaScript & TypeScript** → ES6+ 문법 및 컴포넌트 기반 개발  
+🌐 Frontend:  
+![Vue.js](https://img.shields.io/badge/Vue.js-4FC08D?style=for-the-badge&logo=vue.js&logoColor=white)  
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)  
 
-### ☁️ DevOps & Cloud  
-- **Docker & Docker Compose** → 컨테이너화된 애플리케이션 배포  
-- **AWS (EC2, S3, RDS)** → 클라우드 환경에서 백엔드 서버 운영  
-- **GitHub Actions** → CI/CD 자동화 파이프라인 구축  
-
+📦 DevOps & Cloud:  
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)  
+![AWS](https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazonaws&logoColor=white)  
+![GitHub Actions](https://img.shields.io/badge/GitHub%20Actions-2088FF?style=for-the-badge&logo=github-actions&logoColor=white)  
