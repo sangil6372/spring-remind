@@ -51,32 +51,32 @@ jobs:
           docker build -t $DOCKER_USERNAME/cicd .
           docker push $DOCKER_USERNAME/cicd
           
-deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4.1.0
-
-      - name: SCP Command to Transfer Files
-        uses: appleboy/scp-action@v0.1.4
-        with:
-          host: ${{secrets.EC2_HOST}}
-          username: ubuntu
-          key: ${{secrets.EC2_PRIVATE_KEY}}
-          source: "./docker-compose.yml"
-          target: "/home/ubuntu"
-          port: 22
-
-      - name: SSH Remote Commands
-        uses: appleboy/ssh-action@v1.0.0
-        with:
-          host: ${{secrets.EC2_HOST}}
-          username: ubuntu
-          key: ${{secrets.EC2_PRIVATE_KEY}}
-          port: 22
-          script: |
-            sudo docker-compose down
-            sudo docker-compose pull
-            sudo docker-compose up -d
-            sudo docker image prune -f
+  deploy:
+      needs: build
+      runs-on: ubuntu-latest
+      steps:
+        - name: Checkout
+          uses: actions/checkout@v4.1.0
+  
+        - name: SCP Command to Transfer Files
+          uses: appleboy/scp-action@v0.1.4
+          with:
+            host: ${{secrets.EC2_HOST}}
+            username: ubuntu
+            key: ${{secrets.EC2_PRIVATE_KEY}}
+            source: "./docker-compose.yml"
+            target: "/home/ubuntu"
+            port: 22
+  
+        - name: SSH Remote Commands
+          uses: appleboy/ssh-action@v1.0.0
+          with:
+            host: ${{secrets.EC2_HOST}}
+            username: ubuntu
+            key: ${{secrets.EC2_PRIVATE_KEY}}
+            port: 22
+            script: |
+              sudo docker-compose down
+              sudo docker-compose pull
+              sudo docker-compose up -d
+              sudo docker image prune -f
