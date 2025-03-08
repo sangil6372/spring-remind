@@ -1,0 +1,7 @@
+version: '3'
+services:
+  spring:
+    image: sangil/cicd:latest
+    container_name: spring-remind
+    ports:
+      - 8080:8080
