@@ -22,7 +22,7 @@ jobs:
           distribution: 'temurin'
 
       - name: Cache
-        uses: actions/cache@v3.3.2
+        uses: actions/cache@v4  # 최신 버전으로 변경
         with:
           path: |
             ~/.gradle/caches
